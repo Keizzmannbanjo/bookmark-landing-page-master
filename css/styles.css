@@ -1,0 +1,362 @@
+:root {
+    --color-primary: hsl(231, 69%, 60%);
+    --color-secondary-1: hsl(0, 94%, 66%);
+    --color-secondary-2: hsl(229, 31%, 21%);
+    --color-neutral-1: hsl(229, 8%, 60%);
+    --color-neutral-2: hsl(0, 0%, 93%);
+    --color-neutral-3: hsl(0, 0%, 100%);
+}
+
+/* ?    GENERAL STYLES   */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: var(--color-neutral-1);
+    margin-top: 0.8em;
+}
+
+img {
+    display: inline-block;
+}
+
+body {
+    width: 100%;
+    max-width: 1440px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.brand-logo {
+    height: 30px;
+}
+
+/* ?    UTILITIES    */
+.btn {
+    font-weight: 600;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 1px 5px 0px var(--color-neutral-1);
+}
+
+.btn-red {
+    background-color: var(--color-secondary-1);
+    color: var(--color-neutral-3);
+}
+
+.btn-blue {
+    background-color: var(--color-primary);
+    color: var(--color-neutral-3);
+    padding: 0.5em 0.8em;
+    margin-top: 1rem;
+}
+
+.btn-light {
+    background-color: var(--color-neutral-2);
+    color: var(--color-secondary-2);
+    padding: 0.5em 0.8em;
+    margin-top: 1rem;
+}
+
+/* ?    TYPOGRAPHY   */
+h1,
+h2,
+h3,
+h4 {
+    color: var(--color-secondary-2);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* ?    NAVBAR   */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding-top: 1rem;
+}
+
+.nav_link_list li,
+.footer_nav_list li {
+    display: inline;
+}
+
+.nav_link {
+    color: var(--color-secondary-2);
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding-right: 2em;
+}
+
+.login_btn {
+    padding: 0.5em 1.3em;
+}
+
+/* ?    HERO     */
+
+.hero {
+    padding-left: 10%;
+    margin-top: 4rem;
+    display: flex;
+}
+
+.hero_quote {
+    padding-top: 5%;
+}
+
+.hero_body,
+.feature_tab_body {
+    text-align: left;
+}
+
+.hero_btn:nth-child(2) {
+    margin-left: 10px;
+}
+
+/* ?    FEATURES     */
+
+.features_content,
+.downloads_content,
+.faq_content {
+    text-align: center;
+    width: 35%;
+    margin: auto;
+    margin-top: 2.5rem;
+}
+
+.features_tab_links {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--color-neutral-2);
+    padding-bottom: 0.5rem;
+}
+
+.feature_tab_link {
+    color: var(--color-secondary-2);
+    padding: 0 1rem 0.5rem;
+}
+
+.feature_tab_link-active {
+    border-bottom: 2px solid var(--color-secondary-1);
+    font-weight: 600;
+}
+
+.feature_tab_link:hover {
+    cursor: pointer;
+}
+
+/* ?    FEATURE TABS     */
+
+.features_tabs {
+    margin-top: 2rem;
+}
+
+.feature_tab {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature_tab_photo {
+    flex-basis: 50%;
+}
+
+.feature_tab_content {
+    flex-basis: 40%;
+    padding-right: 10%;
+    padding-top: 5%;
+}
+
+/* ?    DOWNLOADS CARD   */
+
+.downloads_cards {
+    width: 70%;
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.download_card {
+    width: 30%;
+    text-align: center;
+    box-shadow: 1px 1px 15px 0px var(--color-neutral-2);
+    padding: 2rem 0.7rem 0.7rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.download_card-lower {
+    margin-top: 1.5rem;
+}
+
+.download_card-lowest {
+    margin-top: 2.5rem;
+}
+
+.download_btn {
+    font-size: 0.7em;
+    padding: 0.8em 2.3em;
+}
+
+.download_card_title {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.download_card_body {
+    font-size: 0.8rem;
+}
+
+.dots {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* ?    FAQS     */
+
+.faq_questions {
+    width: 35%;
+    margin: 1.5rem auto;
+    border-top: 1px solid var(--color-neutral-2);
+}
+
+.faq_questions li {
+    display: block;
+    padding: 0.7rem 0.1rem;
+    border-bottom: 1px solid var(--color-neutral-2);
+    color: var(--color-secondary-2);
+}
+
+.faq_questions li div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info_btn-centered {
+    display: block;
+    margin: auto;
+}
+
+/* ?    NEWSLETTER   */
+
+.newsletter {
+    background-color: var(--color-primary);
+
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+    margin-top: 4rem;
+}
+
+.newsletter_count,
+.newsletter_body {
+    color: var(--color-neutral-3);
+}
+
+.newsletter_count {
+    font-size: 0.8rem;
+}
+
+.newsletter_body {
+    font-weight: 600;
+    margin-top: 7px;
+    margin-bottom: 0.95rem;
+}
+
+.newsletter_input {
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--color-neutral-3);
+    font-size: 0.6rem;
+    color: var(--color-neutral-2);
+    padding: 0.7em 0.8em;
+    width: 250px;
+}
+
+.newsletter_btn {
+    padding: 0.7em 0.8em;
+    margin-left: 5px;
+    font-size: 0.6rem;
+}
+
+/* ?    FOOTER   */
+
+.footer {
+    background-color: var(--color-secondary-2);
+    padding: 1rem 0;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-flex div {
+    display: flex;
+    align-items: center;
+}
+
+.footer .brand_logo,
+.social_link {
+    color: var(--color-neutral-3);
+}
+
+.footer_nav_list {
+    display: inline-block;
+}
+
+.footer_nav_link {
+    color: var(--color-neutral-1);
+}
+
+.socials {
+    align-self: center;
+}
+
+.socials li {
+    display: inline-block;
+}
+
+.social_link {
+    padding-left: 1rem;
+}

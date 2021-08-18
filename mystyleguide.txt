@@ -1,0 +1,13 @@
+classes:
+Soft Red(login, newsletter button): hsl(0, 94%, 66%)
+Soft blue(primary-color):hsl(231, 69%, 60%)
+
+
+Grayish blue(text,nav): hsl(229, 8%, 60%)
+darker text:rgb(67, 70, 84)
+newsletter: hsl(247, 89%, 63%)
+
+white button bg:rgb(237, 237, 237)
+
+
+darkish blue(footer-bg):hsl(229, 31%, 21%)
