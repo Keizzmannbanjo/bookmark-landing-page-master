@@ -82,3 +82,21 @@ function validateEmail(e) {
         msg.style.visibility = "visible"
     }
 }
+
+let menuBtn = document.querySelector("#hamburger_img")
+
+menuBtn.addEventListener("click", function (e) {
+    e.preventDefault()
+    if (e.target.className == "menu") {
+        e.target.src = "./images/icon-close.svg"
+        document.querySelector(".navbar").className += " active"
+        document.querySelector(".flex .brand_logo").src = "./images/logo-bookmark-white.svg"
+        e.target.className = "hide"
+    } else {
+        document.querySelector(".navbar").className = "navbar"
+        e.target.src = "./images/icon-hamburger.svg"
+        document.querySelector(".flex .brand_logo").src = "./images/logo-bookmark.svg"
+     
+        e.target.className = "menu"
+    }
+})
