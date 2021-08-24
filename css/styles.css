@@ -19,6 +19,7 @@ html {
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     font-weight: 400;
+    line-height: 1.5;
 }
 
 ul {
@@ -147,7 +148,7 @@ h2 {
 
 .nav_link {
     color: var(--color-secondary-2);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.8rem;
     padding-right: 2.5em;
 }
@@ -161,7 +162,7 @@ h2 {
     padding: 0.5em 1.3em;
 }
 
-@media screen and (min-width: 375px) and (max-width:810px) {
+@media screen and (min-width: 375px) and (max-width: 810px) {
     .navbar > .flex {
         width: 100%;
     }
@@ -241,7 +242,7 @@ h2 {
 /* ?    HERO     */
 
 .hero {
-    margin-top: 4rem;
+    margin-top: 5.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -265,7 +266,7 @@ h2 {
     margin-left: 10px;
 }
 
-@media screen and (min-width: 375px) and (max-width:810px) {
+@media screen and (min-width: 375px) and (max-width: 810px) {
     .hero {
         flex-direction: column-reverse;
         justify-content: center;
@@ -293,7 +294,7 @@ h2 {
 .downloads_content,
 .faq_content {
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 5.5rem;
 }
 
 .features_tab_links {
@@ -323,7 +324,7 @@ h2 {
     color: var(--color-secondary-1);
 }
 
-@media screen and (min-width: 375px) and (max-width:810px) {
+@media screen and (min-width: 375px) and (max-width: 810px) {
     .features_tab_links {
         flex-direction: column;
         width: 100%;
@@ -365,7 +366,7 @@ h2 {
     width: 40%;
 }
 
-@media screen and (min-width: 375px) and (max-width:810px) {
+@media screen and (min-width: 375px) and (max-width: 810px) {
     .features_tabs {
         margin-top: 1.5rem;
     }
@@ -434,7 +435,7 @@ h2 {
     margin-top: 1rem;
 }
 
-@media screen and (min-width: 375px) and (max-width:810px) {
+@media screen and (min-width: 375px) and (max-width: 810px) {
     .downloads_cards {
         width: 100%;
         flex-direction: column;
@@ -486,7 +487,7 @@ h2 {
     padding: 1rem;
 }
 
-@media screen and (min-width: 375px) and (max-width:810px) {
+@media screen and (min-width: 375px) and (max-width: 810px) {
     .faq_questions {
         width: 90%;
     }
@@ -560,7 +561,7 @@ h2 {
     font-size: 0.6rem;
 }
 
-@media screen and (min-width: 375px) and (max-width:810px) {
+@media screen and (min-width: 375px) and (max-width: 810px) {
     #newsletter_form {
         flex-direction: column;
         align-items: center;
@@ -625,7 +626,7 @@ h2 {
     color: var(--color-secondary-1);
 }
 
-@media screen and (min-width: 375px) and (max-width:810px) {
+@media screen and (min-width: 375px) and (max-width: 810px) {
     .container {
         width: 90%;
     }
