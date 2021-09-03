@@ -1,10 +1,67 @@
-let tabLinks = document.querySelectorAll("#feature_tab_link"),
-    tabs = document.querySelectorAll(".feature_tab")
+// ?    VARIABLE DECLARATIONS HERE
 
-// ? Listens for tab links clicked
+let tabLinks = document.querySelectorAll("#feature_tab_link"),
+    tabs = document.querySelectorAll(".feature_tab"),
+    questions = document.querySelectorAll(".question"),
+    questionItems = document.querySelectorAll(".question_item"),
+    formButton = document.querySelector(".newsletter_btn"),
+    email = document.querySelector("#email"),
+    msg = document.querySelector(".msg"),
+    menuBtn = document.querySelector("#hamburger_img")
+
+// ?    EVENTS HANDLERS HERE
+
+// ? Handles feature tabs clicks
 tabLinks.forEach((link) => link.addEventListener("click", showTab))
 
-// ? Displays the clicked tab
+// ? Handles mouseover event for questions links
+questions.forEach((question) =>
+    question.addEventListener("mouseover", function (e) {
+        question.style.color = "hsl(0, 94%, 66%)"
+        question.style.cursor = "pointer"
+    })
+)
+
+// ? Handles mouseout event for questions links
+questions.forEach((question) =>
+    question.addEventListener("mouseout", function (e) {
+        question.style.color = "hsl(229, 31%, 21%)"
+    })
+)
+
+// ? Handles click event for questions container
+questionItems.forEach((item) => {
+    item.addEventListener("click", displayQuestion)
+})
+
+// ? Handles focus event for email input
+email.addEventListener("focus", function (e) {
+    msg.style.visibility = "hidden"
+})
+
+// ? Handles click event for email form submit button
+formButton.addEventListener("click", validateEmail)
+
+// ? Handles click event of mobile menu button
+menuBtn.addEventListener("click", function (e) {
+    e.preventDefault()
+    if (e.target.className == "menu") {
+        e.target.src = "./images/icon-close.svg"
+        document.querySelector(".navbar").className += " active"
+        document.querySelector(".flex .brand_logo").src = "./images/logo-bookmark-white.svg"
+        e.target.className = "hide"
+    } else {
+        document.querySelector(".navbar").className = "navbar"
+        e.target.src = "./images/icon-hamburger.svg"
+        document.querySelector(".flex .brand_logo").src = "./images/logo-bookmark.svg"
+
+        e.target.className = "menu"
+    }
+})
+
+// ?    FUNCTIONS / EVENT FUNCTIONS HERE
+
+// ? Displays the clicked feature tab
 function showTab(e) {
     e.preventDefault()
     let id = parseInt(e.target.dataset.key) - 1
@@ -16,29 +73,7 @@ function showTab(e) {
     e.target.className += " feature_tab_link-active"
 }
 
-let questions = document.querySelectorAll(".question")
-
-// ? Triggers when the mouse hovers on questions
-questions.forEach((question) =>
-    question.addEventListener("mouseover", function (e) {
-        question.style.color = "hsl(0, 94%, 66%)"
-        question.style.cursor = "pointer"
-    })
-)
-
-// ? Returns questions to previous state on mouse leave
-questions.forEach((question) =>
-    question.addEventListener("mouseout", function (e) {
-        question.style.color = "hsl(229, 31%, 21%)"
-    })
-)
-
-let questionItems = document.querySelectorAll(".question_item")
-
-questionItems.forEach((item) => {
-    item.addEventListener("click", displayQuestion)
-})
-
+// ? Displays the clicked question
 function displayQuestion(e) {
     e.preventDefault()
     let id
@@ -59,17 +94,7 @@ function displayQuestion(e) {
     }
 }
 
-let formButton = document.querySelector(".newsletter_btn")
-
-let email = document.querySelector("#email")
-let msg = document.querySelector(".msg")
-
-email.addEventListener("focus", function (e) {
-    msg.style.visibility = "hidden"
-})
-
-formButton.addEventListener("click", validateEmail)
-
+// ? Validates submitted email
 function validateEmail(e) {
     e.preventDefault()
     let email = document.querySelector("#email")
@@ -82,21 +107,3 @@ function validateEmail(e) {
         msg.style.visibility = "visible"
     }
 }
-
-let menuBtn = document.querySelector("#hamburger_img")
-
-menuBtn.addEventListener("click", function (e) {
-    e.preventDefault()
-    if (e.target.className == "menu") {
-        e.target.src = "./images/icon-close.svg"
-        document.querySelector(".navbar").className += " active"
-        document.querySelector(".flex .brand_logo").src = "./images/logo-bookmark-white.svg"
-        e.target.className = "hide"
-    } else {
-        document.querySelector(".navbar").className = "navbar"
-        e.target.src = "./images/icon-hamburger.svg"
-        document.querySelector(".flex .brand_logo").src = "./images/logo-bookmark.svg"
-     
-        e.target.className = "menu"
-    }
-})
