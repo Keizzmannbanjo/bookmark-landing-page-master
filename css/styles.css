@@ -100,6 +100,26 @@ body {
     border: 1px solid var(--color-secondary-2);
 }
 
+@media screen and (min-width: 375px) and (max-width: 810px) {
+    .btn-blue:hover {
+        background-color: var(--color-primary);
+        color: var(--color-neutral-3);
+        border: 1px solid var(--color-primary);
+    }
+
+    .btn-red:hover {
+        background-color: var(--color-secondary-1);
+        color: var(--color-neutral-3);
+        border: 1px solid var(--color-secondary-1);
+    }
+
+    .btn-light:hover {
+        background-color: var(--color-neutral-2);
+        color: var(--color-secondary-2);
+        border: 1px solid var(--color-neutral-2);
+    }
+}
+
 /* ?    TYPOGRAPHY   */
 h1,
 h2,
@@ -139,6 +159,7 @@ h2 {
     display: none;
     color: var(--color-secondary-2);
     width: 30px;
+    cursor: pointer;
 }
 
 .nav_link_list li,
@@ -158,11 +179,15 @@ h2 {
     color: var(--color-secondary-1);
 }
 
-.login_btn {
+#login_btn {
     padding: 0.5em 1.3em;
 }
 
 @media screen and (min-width: 375px) and (max-width: 810px) {
+    .navbar {
+        width: 100%;
+    }
+
     .navbar > .flex {
         width: 100%;
     }
@@ -188,7 +213,7 @@ h2 {
         background-color: var(--color-secondary-2);
         opacity: 0.8;
         z-index: 999;
-        padding: 2rem 1rem;
+        padding-right: 1rem;
         justify-content: flex-start;
     }
 
@@ -216,15 +241,15 @@ h2 {
     }
 
     .navbar.active .nav_link {
-        color: var(--color-neutral-2);
+        color: var(--color-neutral-3);
+        font-weight: 600;
     }
 
     .navbar.active .flex {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        width: 90%;
     }
 
-    .login_btn {
+    #login_btn {
         background-color: transparent;
         color: white;
         border: 2px solid var(--color-neutral-3);
@@ -236,6 +261,11 @@ h2 {
         font-size: 1rem;
         padding: 1em 2em;
         border-radius: 7px;
+    }
+
+    #login_btn:hover {
+        background-color: transparent;
+        color: white;
     }
 }
 
@@ -332,6 +362,10 @@ h2 {
         border-top: 2px solid var(--color-neutral-2);
         text-align: center;
         align-content: center;
+    }
+
+    .feature_tab_link:hover {
+        color: var(--color-secondary-2);
     }
 
     .features_tab_links li {
@@ -655,11 +689,19 @@ h2 {
         display: block;
     }
 
+    .footer_nav_link:hover {
+        color: var(--color-neutral-1);
+    }
+
     .socials {
         margin-top: 2rem;
     }
 
     .social_link {
         padding: 0;
+    }
+
+    .social_link:hover {
+        color: var(--color-neutral-3);
     }
 }
